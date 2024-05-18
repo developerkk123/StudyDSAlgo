@@ -13,7 +13,8 @@ public class MergeArray {
             if(arr1[l] <= arr2[r]){
                 result[i++] = arr1[l];
                 l++;
-            }else{
+            }
+            else{
                 result[i++]= arr2[r];
                 r++;
             }
