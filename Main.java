@@ -41,11 +41,11 @@ public class Main {
         // int k=0;
         HashMap<Integer, Integer> mp = new HashMap<>();
         mp.put(30, 0);
-        mp.put(30,2);
-        mp.put(30,3);
-        mp.put(32,1);
-        mp.put(33,1);
-        mp.put(32,1);
+        mp.put(31,1);
+        mp.put(32,2);
+        mp.put(33,3);
+        mp.put(34,4);
+        mp.put(32,5);
         if(mp.containsKey(30)){
             System.out.println(mp.get(30));
 
