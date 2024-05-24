@@ -49,19 +49,37 @@ public class MergeSortedLinkedList {
         }
         return result.next; // result.next because doesnt want to print -1;
     }
+    public static Node sortLinkedList(Node head){
+        // here we will sort linked list using merge sort approach
+        // use recursive approach to devide list into 2 sub list
+        // and use merge sort
+        if(head == null || head.next == null){ // base case of recusrion
+            return head;
+        }
+        // use tortise method to find middle of list and devide into 2 list
+        Node slow = head;
+        Node fast = head;
+        Node prev = null;
+        while(fast != null && fast.next != null){
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        prev.next = null;// create division in list
+        Node list1 = sortLinkedList(head);
+        Node list2 = sortLinkedList(slow);
+       // mergeTwoLists(list1, list2);
+        return mergeTwoLists(list1, list2);
+    }
     public static void main(String[] args) {
         Node head = new Node(0);
-        head.next = new Node(1);
-        head.next.next = new Node(2);
+        head.next = new Node(5);
+        head.next.next = new Node(9);
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(6);
 
-
-        //
-        Node head2 = new Node(1);
-        head.next = new Node(3);
-        head.next.next = new Node(4);
-        Node tempHead=  mergeTwoLists(head, head2);
-        printLinkedList(tempHead);
+       // Node tempHead=  mergeTwoLists(head, head2);
+     Node newhead =  sortLinkedList(head);
+     printLinkedList(newhead);
     }
 }
