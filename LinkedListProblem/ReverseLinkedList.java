@@ -74,27 +74,14 @@ public class ReverseLinkedList {
         }
         return prev;
     }
-    // reverse linked list till some length k
-    public static void reverseLinkedListInGroup(Node head, int k){
-        Node currentNode = head;
-        // Node prev = null;
-        while(k > 0){
-            int currentNodeVal = currentNode.data;
-            currentNode.data = currentNode.next.data;
-            currentNode.next.data = currentNodeVal;
-            currentNode = currentNode.next;
-            k--;
-        }
-        // head = prev;
-    }
     public static void main(String[] args) {
         Node head = new Node(0);
         head.next = new Node(1);
         head.next.next = new Node(2);
         head.next.next.next = new Node(3);
         head.next.next.next.next = new Node(4);
-     //   Node tempHead=  reverseNodeOptimal(head);
-        reverseLinkedListInGroup(head, 2);
-        printLinkedList(head);
+        Node tempHead=  reverseNodeOptimal(head);
+        
+        printLinkedList(tempHead);
     }
 }
