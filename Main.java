@@ -34,23 +34,18 @@ public class Main {
        }
     }
     public static void main(String[] args) {
-        int[] nums = {-7, 8};
-        int[] arr = {-8, -3,8};
-       // int[] nums = {-37, 10,-9,15,-14,31};
-       // [15,-37,14,-10,31,-9]
-        // int k=0;
-        HashMap<Integer, Integer> mp = new HashMap<>();
-        mp.put(30, 0);
-        mp.put(31,1);
-        mp.put(32,2);
-        mp.put(33,3);
-        mp.put(34,4);
-        mp.put(32,5);
-        if(mp.containsKey(30)){
-            System.out.println(mp.get(30));
-
+      // in-place modification of array
+        int[] arr = {1,1,2,3,4,4};
+        int i=0;
+        for(int j=1;j<arr.length;j++){
+          if(arr[i]!=arr[j]){
+            i++;
+            arr[i]=arr[j];
+          }
         }
-        
-      //  unionArray(nums, arr);
+        //output arr ={1,2,3,4,4,4}
+       for(int k: arr){
+        System.out.println("element = "+ k);
+       }
     }
 }
