@@ -12,21 +12,21 @@ public class SubArrayWithZeroSum {
         // i=0; sum =1;
         // i=1; sum = 3;
         //i=2; sum = 1; // now see sum become 1 mean isse pahle 2, and -2 aaye
-        // jiska effect kuchh nahi hua sum p; yahi wo sun array hai [2,-2]
+        // jiska effect kuchh nahi hua sum p; yahi wo sum array hai [2,-2]
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
         int maxLength =0;
-        int sum =0;
+        int prefixSum =0;
         for(int i = 0; i< nums.length; i++){
-           sum = sum + nums[i];
-           if(sum ==0){
+           prefixSum = prefixSum + nums[i];
+           if(prefixSum ==0){
              maxLength = i+1;
            }else{
-            if(map.get(sum) != null){// check prefix sum in map
-                maxLength = Math.max(maxLength, i-map.get(sum));
+            if(map.get(prefixSum) != null){// check prefix prefixSum in map
+                maxLength = Math.max(maxLength, i-map.get(prefixSum));
             }else{
-                map.put(sum,i);
+                map.put(prefixSum,i);
             }
            }
         }

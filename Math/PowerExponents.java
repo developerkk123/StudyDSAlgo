@@ -18,6 +18,21 @@ public class PowerExponents {
         return ans;
     }
 
+    public static long powerOfNumberMostOptimal(long x, long n){
+         // use devide and conqure method
+         // let we have to calculate a^b
+         // c = b/2;
+         // now problem become a^c * a^c in case of even , odd case  a * a^c * a^c;
+        // it means x^y = x^y/2 * x^y/2 mean power reduce to half 
+        // if temp = x^y/2 then in final ans just multiply temp again;
+        if(n==0) return 1; // base case
+        long temp = powerOfNumberMostOptimal(x, n/2);
+        if(n%2 != 0){
+            return temp*temp*x;
+        }else{
+            return temp*temp;
+        }
+    }
     // for negative power and decimal handling
  public static double powerOfNumberDec(double x, long n){
     double ans = 1.0;

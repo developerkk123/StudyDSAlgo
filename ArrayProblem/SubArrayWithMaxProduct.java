@@ -1,6 +1,6 @@
 package ArrayProblem;
 
-public class SubArrayWithMaxSum {
+public class SubArrayWithMaxProduct {
     //method 1 with O(n*n*n) time complexity
     public static void maxProductSubArray(int[] nums){
        int max = -10000;
@@ -22,7 +22,7 @@ public class SubArrayWithMaxSum {
         int prefixSum=1;// checking
         int suffixSum = 1;
         for(int i=0;i<nums.length; i++){
-            if(prefixSum == 0) prefixSum =1;
+            if(prefixSum == 0) prefixSum =1;// no point of taking 0 forward it will give 0 
             if(suffixSum == 0) suffixSum =1;
 
             // multiply pre and post

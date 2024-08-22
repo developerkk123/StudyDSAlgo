@@ -22,7 +22,9 @@ public class SubArrayWithSumK {
             }
 
             //Finally, update the map checking the conditions:
-            if (!map.containsKey(sum)) {// check index 9 and 10 if we found same index at 2 index
+            if (!map.containsKey(sum)) {// check index 9 and 10 if we found same sum index at 2 index
+                // in case of 0 sum will be same at 2 index for eg {10, 0, 2} at i=0, sum = 10 and i=1, sum =10;
+                // so take the first sum to get max length
                 map.put(sum, i);
             }
         }
