@@ -1,3 +1,4 @@
+import java.security.KeyStore.Entry;
 import java.util.*;
 
 public class Main {
@@ -71,6 +72,9 @@ public class Main {
     return count;
   }
     public static void main(String[] args) {
-      
+      String str = "abcd";
+     int c =  (int)str.charAt(0)+26;
+     char ct = (char)c;
+      System.out.println(ct);
     }
 }
