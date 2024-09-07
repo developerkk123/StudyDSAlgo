@@ -72,9 +72,26 @@ public class Main {
     return count;
   }
     public static void main(String[] args) {
-      String str = "abcd";
-     int c =  (int)str.charAt(0)+26;
-     char ct = (char)c;
-      System.out.println(ct);
+     // HashMap<String, Integer> map = new HashMap<>();
+     StringBuilder ans = new StringBuilder();
+      String num1 = "11";
+      String num2 = "23";
+      int i = num1.length()-1;
+      int j = num2.length()-1;
+      int rem = 0;
+      int res = 0;
+      while(i >= 0 && j>=0){
+          int n1 = num1.charAt(i)-'0';
+          int n2 = num2.charAt(j)-'0';
+         int sum =  n1 + n2 + rem;
+        //  System.out.println(sum);
+         // rem = (n1+n2)%10;
+          ans.append(sum%10);
+          rem = sum/10;
+          res =
+          i--;j--;
+      }
+
+     System.out.println(ans.toString());
     }
 }

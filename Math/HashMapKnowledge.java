@@ -18,11 +18,11 @@ public class HashMapKnowledge {
         return map.size()== hs.size();
     }
     public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("Kundan", 1);
-        map.put("Ambika", 2);
-        map.put("Kumar", 3);
-        map.put("kumar", 4);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("a", "Apple");
+        map.put("b", "Ball");
+        map.put("c", "Cat");
+       
 
         Stack<Integer> frequency = new Stack<>();
         int[] nums = {3, 2,3, 4, 2};
