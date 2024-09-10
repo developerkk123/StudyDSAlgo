@@ -79,7 +79,6 @@ public class Main {
       int i = num1.length()-1;
       int j = num2.length()-1;
       int rem = 0;
-      int res = 0;
       while(i >= 0 && j>=0){
           int n1 = num1.charAt(i)-'0';
           int n2 = num2.charAt(j)-'0';
@@ -88,7 +87,6 @@ public class Main {
          // rem = (n1+n2)%10;
           ans.append(sum%10);
           rem = sum/10;
-          res =
           i--;j--;
       }
 
