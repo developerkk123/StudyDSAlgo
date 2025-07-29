@@ -1,6 +1,17 @@
 package ArrayProblem;
 
 public class MergeArray {
+    /**
+     * @definition: Merge two sorted arrays into a single sorted array.
+     * @approach: Use two pointers to traverse both arrays and compare elements.
+     * define new array result of size n1+n2 and take one pointer to track index for result array i
+     * traverse through both arrays and compare elements at l and r pointers
+     * whichever is lowset put in reesult array and move pointer.
+     * @timeComplexity: O(n1 + n2) where n1 and n2 are the lengths of the two arrays.
+     * @param arr1
+     * @param arr2
+     * @return
+     */
     // merge two given sorted array into single array
     public static int[] mergeArrayInSortedOrder(int[] arr1, int[] arr2){
         int n1 = arr1.length;

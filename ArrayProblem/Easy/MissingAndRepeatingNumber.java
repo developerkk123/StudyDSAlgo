@@ -1,4 +1,4 @@
-package ArrayProblem;
+package ArrayProblem.Easy;
 
 public class MissingAndRepeatingNumber {
     // https://leetcode.com/problems/set-mismatch/

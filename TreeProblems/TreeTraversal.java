@@ -11,28 +11,8 @@ public class TreeTraversal {
         System.out.print(root.value +" ");
         preorder(root.left);
         preorder(root.right);
-    }
-    public static void inorder(TreeNode root){
-        /*
-         * Logic remember L-P-R
-         * go left -> print -> go right
-         * edge case : if root are null return
-         */
-        if(root == null) return;
-        inorder(root.left);
-        System.out.print(root.value +" ");
-        inorder(root.right);
-    }
-    public static void postorder(TreeNode root){
-        /*
-         * Logic remember L-R-P
-         *  go left -> go right -> print root
-         * edge case : if root are null return
-         */
-        if(root == null) return;
-        postorder(root.left);
-        postorder(root.right);
-        System.out.print(root.value +" ");
+        TreeNode temNode = root.left;
+        TreeNode temNode2 = root.right;
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);

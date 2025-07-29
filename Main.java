@@ -130,9 +130,38 @@ public static void countGood(int[] nums, int k) {
 }public static void main(String[] args) {
     int[] arr = {2,1,3,1,2,2,3,3,2,2,1,1,1,3,1};
     countGood(arr, 11);
-   
-   
+    System.out.println();
+
+    int[][] matrix = {{0,4,1},{9, 3, 7},{9,0,1}};
+    Arrays.sort(arr);
+    for(int[] row : matrix){
+      Arrays.sort(row);
+    }
+    System.out.println(Arrays.deepToString(matrix));
 
   }
 
 }
+
+// public static void inorder(TreeNode root){
+//   /*
+//    * Logic remember L-P-R
+//    * go left -> print -> go right
+//    * edge case : if root are null return
+//    */
+//   if(root == null) return;
+//   inorder(root.left);
+//   System.out.print(root.value +" ");
+//   inorder(root.right);
+// }
+// public static void postorder(TreeNode root){
+//   /*
+//    * Logic remember L-R-P
+//    *  go left -> go right -> print root
+//    * edge case : if root are null return
+//    */
+//   if(root == null) return;
+//   postorder(root.left);
+//   postorder(root.right);
+//   System.out.print(root.value +" ");
+// }

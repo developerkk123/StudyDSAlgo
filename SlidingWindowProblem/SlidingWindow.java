@@ -1,4 +1,4 @@
-package ArrayProblem;
+package SlidingWindowProblem;
 
 public class SlidingWindow {
 
@@ -14,6 +14,7 @@ public class SlidingWindow {
         for (int i = 0; i < k; i++) {
             windowSum += arr[i];
         }
+        System.out.println("window sum ="+ windowSum);
 
         int maxSum = windowSum;
 

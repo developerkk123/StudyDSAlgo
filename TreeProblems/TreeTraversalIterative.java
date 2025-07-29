@@ -44,7 +44,7 @@ public class TreeTraversalIterative {
          * Data structure: Use stack
          * Step 1: First push root
          * Step 2: pop from stack and print 
-         * Step 3: push first right 
+         * Step 3: push first right <----- imp
          * Step 4: push left
          * 
          */

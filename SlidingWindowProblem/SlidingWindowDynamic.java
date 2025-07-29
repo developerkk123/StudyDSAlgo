@@ -1,4 +1,4 @@
-package ArrayProblem;
+package SlidingWindowProblem;
 import java.util.*;
 
 public class SlidingWindowDynamic {
