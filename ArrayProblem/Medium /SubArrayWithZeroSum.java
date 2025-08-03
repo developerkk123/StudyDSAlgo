@@ -6,7 +6,7 @@ public class SubArrayWithZeroSum {
     public static void maxLengthSubarrayWithZeroSum(int[] nums){
 
         // declare hashMap to store prefix sum and index
-        // if prefix sum is same found mean bich m kuchh ase element mile
+        // if prefix sum is same found means bich m kuchh ase element mile
         // jo apas m cut hue honge tabhi adding m koi effect nahi hue;
         // arr = {1,2,-2}
         // i=0; sum =1;
